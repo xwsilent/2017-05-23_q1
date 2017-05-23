@@ -1,11 +1,9 @@
 const main = require('../main/main');
-const fs = require('fs')
 
-describe('validate the file exist', () => {
+describe('main()', () => {
 
-    it('should get HELLOWORLD.md exist in root folder like readme.md', () => {
-        fs.exists('./HELLOWORLD.md', (isExist) => {
-            expect(isExist).toBe(true);
-        })
+    it('should calculate the remaindar', () => {
+        expect(main(9, 3)).toBe(0);
+        expect(main(11, 4)).toBe(3);
     });
 });
